@@ -21,7 +21,7 @@ object DefaultArgs extends App {
     println("saving picture...")
 
   // Error: Compiler assumes that 800 is the first argument (format)
-  savePicture(800)
+//  savePicture(800)
   // Right
   savePicture(width = 800)
 
