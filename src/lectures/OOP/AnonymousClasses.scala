@@ -1,5 +1,10 @@
 package lectures.OOP
 
+/**
+ * @author Minh Tran
+ * @version 25/10/2022
+ */
+
 object AnonymousClasses extends App {
   abstract class Animal {
     def eat: Unit

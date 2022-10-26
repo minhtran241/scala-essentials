@@ -4,6 +4,7 @@ package lectures.OOP
  * @author Minh Tran
  * @version 10/25/2022
  */
+
 object Objects extends App {
   // NOTE: SCALA DOES NOT HAVE CLASS-LEVEL FUNCTIONALITY ("static")
   // NOTE: TO USE CLASS-LEVEL FUNCTIONALITY ("static") IN SCALA WE USE OBJECT

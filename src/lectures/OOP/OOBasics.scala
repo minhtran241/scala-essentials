@@ -4,6 +4,7 @@ package lectures.OOP
  * @author Minh Tran
  * @version 10/25/2022
  */
+
 object OOBasics extends App {
   val person = new Person("Scala", 18) // all body code of Person executed
   println(person.x)

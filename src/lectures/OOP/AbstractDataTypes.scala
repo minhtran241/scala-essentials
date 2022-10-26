@@ -4,6 +4,7 @@ package lectures.OOP
  * @author Minh Tran
  * @version 10/25/2022
  */
+
 object AbstractDataTypes extends App {
 
   // abstract

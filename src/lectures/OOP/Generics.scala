@@ -1,5 +1,10 @@
 package lectures.OOP
 
+/**
+ * @author Minh Tran
+ * @version 25/10/2022
+ */
+
 object Generics extends App {
   class MyList[+A] {
     // use the type A

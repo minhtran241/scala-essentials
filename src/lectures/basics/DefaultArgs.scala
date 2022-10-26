@@ -9,6 +9,7 @@ import scala.annotation.tailrec
  * @author Minh Tran
  * @version 25/10/2022
  */
+
 object DefaultArgs extends App {
   @tailrec
   def trFact(n: Int, accumulator: Int = 1): Int =
