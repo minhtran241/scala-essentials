@@ -1,5 +1,5 @@
 
-## Scala Essentials Knowledge
+# Scala Essentials Knowledge
 
 All essentials theories you need to know about [Scala Programming Language](https://scala-lang.org)
 
