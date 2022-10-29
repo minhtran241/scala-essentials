@@ -2,7 +2,7 @@ package com.minhtran241.scala.oop.files
 
 import com.minhtran241.scala.oop.filesystem.FilesystemException
 
-class File(override val parentsPath: String, override val name: String, content: String)
+class File(override val parentsPath: String, override val name: String, val content: String)
   extends DirEntry(parentsPath, name) {
   override def asDirectory: Directory =
     throw new FilesystemException("A file cannot be converted to a directory.")
