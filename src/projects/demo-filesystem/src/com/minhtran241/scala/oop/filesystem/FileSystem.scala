@@ -3,7 +3,7 @@ package com.minhtran241.scala.oop.filesystem
 import com.minhtran241.scala.oop.cmd.Command
 import com.minhtran241.scala.oop.files.Directory
 
-import java.util.Scanner
+//import java.util.Scanner
 
 object FileSystem extends App {
 
