@@ -15,15 +15,26 @@ class Directory(
     findEntry(name) != null
 
   def getAllFoldersInPath: List[String] =
-    path.substring(1).split(Directory.SEPERATOR).toList.filter(e => e.nonEmpty)
+    path.substring(1).split(Directory.SEPARATOR).toList.filter(e => e.nonEmpty)
   // /a/b/c/d => List["a", "b", "c", "d"]
 
   def findDescendant(path: List[String]): Directory =
     if (path.isEmpty) this
     else findEntry(path.head).asDirectory.findDescendant(path.tail)
 
+  def findDescendant(relativePath: String): Directory =
+    if (relativePath.isEmpty) this
+    else findDescendant(relativePath.split(Directory.SEPARATOR).toList)
+
   def addEntry(newEntry: DirEntry): Directory =
     new Directory(parentsPath, name, contents :+ newEntry)
+
+  def removeEntry(entryName: String): Directory = {
+    if (!hasEntry(entryName)) this
+    else new Directory(parentsPath, name, contents.filter(
+      e => !e.name.equals(entryName))
+    )
+  }
 
   def findEntry(entryName: String): DirEntry = {
     @tailrec
@@ -43,7 +54,8 @@ class Directory(
 
   def asDirectory: Directory = this
 
-  def asFile: File = throw new FilesystemException("A directory cannot be converted to a file.")
+  def asFile: File =
+    throw new FilesystemException("A directory cannot be converted to a file.")
 
   override def isDirectory: Boolean = true
 
@@ -54,7 +66,7 @@ class Directory(
 }
 
 object Directory {
-  val SEPERATOR = "/"
+  val SEPARATOR = "/"
   val ROOT_PATH = "/"
 
   def ROOT: Directory = Directory.empty("", "")

@@ -9,7 +9,7 @@ abstract class CreateEntry(name: String) extends Command {
     val wd = state.wd
     if (wd.hasEntry(name)) {
       state.setMessage(s"Entry $name already exists.")
-    } else if (name.contains(Directory.SEPERATOR)) {
+    } else if (name.contains(Directory.SEPARATOR)) {
       // mkdir something/somethingElse -> forbid
       state.setMessage(s"$name must not contain separators.")
     } else if (checkIllegal(name)) {

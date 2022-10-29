@@ -14,9 +14,9 @@ class Cd(dir: String) extends Command {
 
     // 2. find the absolute path of the directory I want to cd to
     val absolutePath =
-      if (dir.startsWith(Directory.SEPERATOR)) dir
+      if (dir.startsWith(Directory.SEPARATOR)) dir
       else if (wd.isRoot) wd.path + dir
-      else wd.path + Directory.SEPERATOR + dir
+      else wd.path + Directory.SEPARATOR + dir
 
     // 3. find the directory to cd to, given the path
     val destinationDirectory = doFindEntry(root, absolutePath)
@@ -62,7 +62,7 @@ class Cd(dir: String) extends Command {
 
     // 1. tokens
     val tokens: List[String] =
-      absolutePath.substring(1).split(Directory.SEPERATOR).toList
+      absolutePath.substring(1).split(Directory.SEPARATOR).toList
 
     // 1.5. eliminate/collapse relative tokens
     val newTokens: List[String] = collapseRelativeTokens(tokens, List())

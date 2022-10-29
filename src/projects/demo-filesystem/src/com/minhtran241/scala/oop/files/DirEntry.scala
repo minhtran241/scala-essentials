@@ -5,7 +5,7 @@ abstract class DirEntry(val parentsPath: String, val name: String) {
   def path: String = {
     val separatorIfNecessary =
       if (Directory.ROOT_PATH.equals(parentsPath)) ""
-      else Directory.SEPERATOR
+      else Directory.SEPARATOR
 
     parentsPath + separatorIfNecessary + name
   }

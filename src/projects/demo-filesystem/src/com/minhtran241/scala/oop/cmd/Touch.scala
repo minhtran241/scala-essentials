@@ -6,5 +6,5 @@ class Touch(name: String) extends CreateEntry(name) {
   override def createSpecificEntry(state: State): DirEntry =
     File.empty(state.wd.path, name)
 
-  override def checkIllegal(name: String): Boolean = true
+  override def checkIllegal(name: String): Boolean = false
 }
