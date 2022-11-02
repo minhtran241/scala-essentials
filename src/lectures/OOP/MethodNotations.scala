@@ -1,5 +1,7 @@
 package lectures.OOP
 
+import scala.language.postfixOps
+
 /**
  * ALL OPERATORS ARE METHODS
  *
